@@ -48,7 +48,8 @@ class NF_Fields_Checkbox extends NF_Abstracts_Input
 
     public function custom_columns( $value, $field )
     {
-        if( 'checkbox' == $field->get_setting( 'type' ) ){
+        if( 'checkbox' == $field->get_setting( 'type' ) ) {
+            if ( 'checked' == $value || 'unchecked' == $value ) return $value;
             $value = ( $value ) ? __( 'checked', 'ninja-forms' ) : __( 'unchecked', 'ninja-forms' );
         }
         return $value;
@@ -81,7 +82,8 @@ class NF_Fields_Checkbox extends NF_Abstracts_Input
     }
 
     public function export_value( $value ) {
-        if ( 1 == $value ) {
+        if ( 'checked' == $value || 'unchecked' == $value ) return $value;
+        if ( $value ) {
             return __( 'checked', 'ninja-forms' );
         } else {
             return __( 'unchecked', 'ninja-forms' );
