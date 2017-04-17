@@ -200,8 +200,10 @@ if( get_option( 'ninja_forms_load_deprecated', FALSE ) && ! ( isset( $_POST[ 'nf
                  * Admin Menus
                  */
                 self::$instance->menus[ 'forms' ]           = new NF_Admin_Menus_Forms();
-                self::$instance->menus[ 'all-forms' ]       = new NF_Admin_Menus_AllForms();
-                self::$instance->menus[ 'add-new' ]         = new NF_Admin_Menus_AddNew();
+                self::$instance->menus[ 'dashboard' ]       = new NF_Admin_Menus_Dashboard();
+                // TODO: Remove these later.
+                //self::$instance->menus[ 'all-forms' ]       = new NF_Admin_Menus_AllForms();
+                //self::$instance->menus[ 'add-new' ]         = new NF_Admin_Menus_AddNew();
                 self::$instance->menus[ 'submissions']      = new NF_Admin_Menus_Submissions();
                 self::$instance->menus[ 'import-export']    = new NF_Admin_Menus_ImportExport();
                 self::$instance->menus[ 'settings' ]        = new NF_Admin_Menus_Settings();
