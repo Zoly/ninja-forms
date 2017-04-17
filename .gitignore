@@ -19,3 +19,7 @@ deploy-old.sh
 tests/
 vendor/
 composer.lock
+
+# Minified Assets
+assets/js/min/dashboard.min.js
+assets/js/lib/backbone.marionette3.min.js
