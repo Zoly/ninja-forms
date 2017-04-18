@@ -5,7 +5,7 @@ final class NF_Database_FormsController
     private $factory;
     private $forms_data = array();
     
-    public function __construct($bool)
+    public function __construct()
     {
         global $wpdb;
         $this->db = $wpdb;
