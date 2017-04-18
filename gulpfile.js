@@ -176,6 +176,16 @@ gulp.task('css:display-opinions-dark', function(){
     .pipe(gulp.dest('assets/css'));
 });
 
+gulp.task('css:dashboard', function(){
+    gulp.src('assets/scss/dashboard/dashboard.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass().on('error', sass.logError))
+        .pipe(postcss(getPostCssProcessors()))
+        .pipe(rename('dashboard.min.css'))
+        .pipe(sourcemaps.write('/'))
+        .pipe(gulp.dest('assets/css'));
+});
+
 gulp.task('gettext', function() {
     gulp.src('lang/*.po')
     .pipe(gettext())
@@ -192,7 +202,7 @@ gulp.task('watch', function() {
 });
 
 gulp.task('js', ['js:builder', 'js:frontend', 'js:dashboard']);
-gulp.task('css', [ 'css:builder', 'css:display-structure', 'css:display-opinions', 'css:display-opinions-light', 'css:display-opinions-dark']);
+gulp.task('css', [ 'css:builder', 'css:display-structure', 'css:display-opinions', 'css:display-opinions-light', 'css:display-opinions-dark', 'css:dashboard']);
 
 gulp.task('build', ['js', 'css']);
 // Default Task
