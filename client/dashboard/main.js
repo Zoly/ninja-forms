@@ -2,7 +2,7 @@ var nfRadio = Backbone.Radio;
 var nfDebug = false;
 
 jQuery( document ).ready( function( $ ) {
-    require( [ 'views/dashboardView' ], function( DashboardView ) {
+    require( [ 'views/dashboardView', 'models/formModel' ], function( DashboardView, FormModel ) {
 
         var NinjaFormsDashboard = Marionette.Application.extend( {
 
@@ -26,7 +26,10 @@ jQuery( document ).ready( function( $ ) {
             onStart: function() {
 
                 // Show the root view for the application.
-                this.showView(new DashboardView());
+                this.showView( new DashboardView() );
+                
+                var data = {id: 1, title: 'Contact Me', created: '10-23-2016'};
+                var form = new FormModel(data);
 
                 /* DEBUG */ if( nfDebug ) console.log( 'Dashboard Started' );
             },
