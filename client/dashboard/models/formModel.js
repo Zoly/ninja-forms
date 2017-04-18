@@ -11,7 +11,7 @@ define( [], function() {
             objectType: 'form',
             id: 0,
             title: 'unknown',
-            created: 'unknown'
+            created_at: 'unknown'
 		},
 
 		initialize: function() {
