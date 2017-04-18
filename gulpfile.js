@@ -186,6 +186,7 @@ gulp.task('gettext', function() {
 gulp.task('watch', function() {
     gulp.watch('assets/js/builder/**/*.js', ['js:builder']);
     gulp.watch('assets/js/front-end/**/*.js', ['js:frontend']);
+    gulp.watch('client/dashboard/**/*.js', ['js:dashboard']);
 
     gulp.watch('assets/scss/**/*.scss', ['css']);
 });
