@@ -16,3 +16,18 @@ th {
     display: flex;
   }
 }
+
+.template-list {
+  display: flex;
+  justify-content: space-between;
+
+  & > div {
+    width: 50%;
+    padding: 5px;
+  }
+
+  .template {
+    padding: 10px;
+    background-color: gray;
+  }
+}

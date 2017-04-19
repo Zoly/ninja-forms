@@ -9,7 +9,7 @@
 define( ['models/formTemplateCollection', 'views/widgets/formsTemplate'], function( TemplateCollection, TemplateView ) {
     var view = Marionette.CollectionView.extend( {
         tagName: 'div',
-        className: 'templateList',
+        className: 'template-list',
         collection: new TemplateCollection(),
         childView: TemplateView,
     } );
