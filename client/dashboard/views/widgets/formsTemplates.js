@@ -6,9 +6,11 @@
  * @copyright (c) 2017 WP Ninjas
  * @since 3.2
  */
-define( [], function() {
-    var view = Marionette.View.extend( {
-        template: "#tmpl-nf-forms-template",        
+define( ['models/formTemplateCollection', 'views/widgets/formsTemplate'], function( TemplateCollection, TemplateView ) {
+    var view = Marionette.CollectionView.extend( {
+        template: "#tmpl-nf-forms-templates",
+        collection: new TemplateCollection(),
+        childView: TemplateView,
     } );
     return view;
 } );

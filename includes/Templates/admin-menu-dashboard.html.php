@@ -60,7 +60,10 @@
 </script>
 
 <!-- Forms Template -->
-<script id="tmpl-nf-forms-template" type="text/template">
+<script id="tmpl-nf-forms-templates" type="text/template">
+    <div class="content">
+    [Templates]
+    </div>
 </script>
 
 <!-- Widget Forms Table -->
