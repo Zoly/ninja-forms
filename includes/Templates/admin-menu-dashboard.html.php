@@ -63,6 +63,10 @@
 
 <!-- Forms Template -->
 <script id="tmpl-nf-forms-template" type="text/template">
+    <div class="template">
+        <div class="title">{{{ data.title }}}</div>
+        <div class="desc">{{{ data.desc }}}</div>
+    </div>
 </script>
 
 <!-- Widget Forms Table -->
