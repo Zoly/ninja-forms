@@ -18,24 +18,53 @@ Widgets
 
 @import 'widgets/forms';
 
-#wpwrap {
+#wpwrap,
+#wpcontent {
   background-color: #F3F6F8;
 }
 
-#ninja-forms-dashboard {
+#wpcontent {
+  padding: 0;
+
+  .wrap {
+    margin: 0;
+  }
+}
+
+@mixin wrap {
   width: 500px;
   max-width: 100%;
   margin: auto;
+}
 
-  nav {
+#ninja-forms-dashboard {
+
+  box-sizing: border-box;
+
+  .topbar,
+  .sections,
+  .content {
     padding: 10px;
     margin-bottom: 20px;
+  }
+
+  header {
     background-color: white;
-    ul {
-      display: flex;
-      li {
-        padding-right: 10px;
-      }
+
+    .app-title {
+      @include wrap;
+      padding: 10px;
     }
+  }
+
+  nav {
+    @include wrap;
+    margin-bottom: 20px;
+  }
+
+
+  main {
+    @include wrap;
+    background-color: white;
   }
 }
