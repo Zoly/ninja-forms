@@ -18,12 +18,11 @@ define( ['models/formModel'], function( FormModel ) {
 
 		initialize: function() {
 			this.newIDs = [];
-            this.fetch( {
-                success: function(response) {console.log(response)},
-                error: function(response) {console.log(response)},
-            });
-		}
-        
+            this.fetch();
+		},
+        parse: function( response, options ){
+		    return response.data;
+        }
 	} );
 	return collection;
 } );

@@ -34,17 +34,4 @@ final class NF_Admin_Menus_Dashboard extends NF_Abstracts_Submenu
         Ninja_Forms::template( 'admin-menu-dashboard.html.php' );
         
     }
-    
-    public function get_forms() {
-        $db_forms_controller = new NF_Database_FormsController();
-        $forms_json = $db_forms_controller->getFormsData();
-        echo( $forms_json );
-        die();
-    }
-
-    public function get_new_form_templates() {
-        $templates = Ninja_Forms()->config( 'NewFormTemplates' );
-        die( json_encode( array_values( $templates ) ) );
-    }
-
 } // End Class NF_Admin_Menus_Dashboard
