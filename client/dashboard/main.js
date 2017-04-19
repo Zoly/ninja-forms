@@ -30,10 +30,10 @@ jQuery( document ).ready( function( $ ) {
                 
                 //var data = {id: 1, title: 'Contact Me', created: '10-23-2016'};
                 //var form = new FormModel(data);
-                var formCollection = new FormCollection();
-                formCollection.fetch( {
-                    success: function(response) { console.log(response); }
-                });
+//                var formCollection = new FormCollection();
+//                formCollection.fetch( {
+//                    success: function(response) { console.log(response); }
+//                });
 
                 /* DEBUG */ if( nfDebug ) console.log( 'Dashboard Started' );
             },

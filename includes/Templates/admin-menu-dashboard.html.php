@@ -32,22 +32,27 @@
 
 <!-- Form Widget -->
 <script id="tmpl-nf-widget-forms" type="text/template">
-    [FORMS WIDGET]
-    <div class="action">
-        <div class="nf-add">Add New</div>
-        <div class="nf-cancel">Cancel</div>
-    </div>
-    <div class="filter"></div>
-    <div class="content"></div>
-    <div class="action2">
-        <div class="nf-more">Show More</div>
-        <div class="nf-less">Show Less</div>
-    </div>
+    <header>
+        <div class="action">
+            <button class="add"><?php _e( 'Add New', 'ninja-forms' ); ?></button>
+            <button class="cancel"><?php _e( 'Cancel', 'ninja-forms' ); ?></button>
+        </div>
+        <div class="filter">
+            <input type="text" placeholder="<?php _e( 'Search Forms', 'ninja-forms' ); ?>">
+        </div>
+    </header>
+    <main class="content"></main>
+    <footer>
+        <div class="action2">
+            <button class="more"><?php _e( 'More', 'ninja-forms' ); ?></button>
+            <button class="less"><?php _e( 'Less', 'ninja-forms' ); ?></button>
+        </div>
+    </footer>
 </script>
 
 <!-- Widget Area Template -->
 <script id="tmpl-nf-widgets" type="text/template">
-    <div class="widget-forms"></div>
+    <div class="widget widget-forms"></div>
 </script>
 
 <!-- Forms Template -->

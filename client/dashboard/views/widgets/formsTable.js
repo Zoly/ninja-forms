@@ -6,9 +6,19 @@
  * @copyright (c) 2017 WP Ninjas
  * @since 3.2
  */
-define( [], function() {
+define( [ 'views/widgets/formsTableBody' ], function( TableBody ) {
     var view = Marionette.View.extend( {
         template: "#tmpl-nf-widget-forms-table",
+        tagName: 'table',
+        regions: {
+            body: {
+                el: 'tbody',
+                replaceElement: true
+            }
+        },
+        onRender: function() {
+            this.showChildView( 'body', new TableBody() );
+        }
         
     } );
     return view;
