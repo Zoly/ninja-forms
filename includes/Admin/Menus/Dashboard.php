@@ -12,6 +12,7 @@ final class NF_Admin_Menus_Dashboard extends NF_Abstracts_Submenu
     {
         parent::__construct();
         add_action( 'wp_ajax_nf_get_forms', array( $this, 'get_forms' ) );
+        add_action( 'wp_ajax_nf_get_new_form_templates', array( $this, 'get_new_form_templates' ) );
     }
 
     public function get_page_title()
@@ -39,6 +40,11 @@ final class NF_Admin_Menus_Dashboard extends NF_Abstracts_Submenu
         $forms_json = $db_forms_controller->getFormsData();
         echo( $forms_json );
         die();
+    }
+
+    public function get_new_form_templates() {
+        $templates = Ninja_Forms()->config( 'NewFormTemplates' );
+        die( json_encode( $templates ) );
     }
 
 } // End Class NF_Admin_Menus_Dashboard
