@@ -45,11 +45,7 @@
 </script>
 
 <!-- Forms Template -->
-<script id="tmpl-nf-widget-forms" type="text/template">
-    <div class="action"></div>
-    <div class="filter"></div>
-    <div class="content"></div>
-    <div class="action2"></div>
+<script id="tmpl-nf-forms-template" type="text/template">
 </script>
 
 <!-- Widget Forms Table -->
