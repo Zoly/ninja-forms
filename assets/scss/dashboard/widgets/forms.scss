@@ -28,6 +28,16 @@ th {
 
   .template {
     padding: 10px;
-    background-color: gray;
+    background-color: #EBEDEE;
+
+    a {
+      color: black;
+      text-decoration: none;
+    }
+
+    .title {
+      display: block;
+      text-align: center;
+    }
   }
 }

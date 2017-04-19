@@ -65,7 +65,7 @@
 <script id="tmpl-nf-forms-template" type="text/template">
     <div class="template">
         <a href="admin.php?page=ninja-forms&form_id={{{ data.id }}}">
-            <div class="title">{{{ data.title }}}</div>
+            <strong class="title">{{{ data.title }}}</strong>
             <div class="desc">{{{ data.desc }}}</div>
         </a>
     </div>
