@@ -41,9 +41,7 @@
             <button class="add"><?php _e( 'Add New', 'ninja-forms' ); ?></button>
             <button class="cancel"><?php _e( 'Cancel', 'ninja-forms' ); ?></button>
         </div>
-        <div class="filter">
-            <input type="text" placeholder="<?php _e( 'Search Forms', 'ninja-forms' ); ?>">
-        </div>
+        <div class="filter"></div>
     </header>
     <main class="content"></main>
     <footer>
@@ -54,6 +52,10 @@
     </footer>
 </script>
 
+<script id="tmpl-nf-widget-forms-filter" type="text/template">
+    <input type="text" placeholder="<?php _e( 'Search Forms', 'ninja-forms' ); ?>">
+</script>
+
 <!-- Widget Area Template -->
 <script id="tmpl-nf-widgets" type="text/template">
     <div class="widget widget-forms"></div>
@@ -61,6 +63,12 @@
 
 <!-- Forms Template -->
 <script id="tmpl-nf-forms-template" type="text/template">
+    <div class="template">
+        <a href="admin.php?page=ninja-forms&form_id={{{ data.id }}}">
+            <div class="title">{{{ data.title }}}</div>
+            <div class="desc">{{{ data.desc }}}</div>
+        </a>
+    </div>
 </script>
 
 <!-- Widget Forms Table -->

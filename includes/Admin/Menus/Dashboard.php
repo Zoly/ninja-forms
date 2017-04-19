@@ -34,5 +34,4 @@ final class NF_Admin_Menus_Dashboard extends NF_Abstracts_Submenu
         Ninja_Forms::template( 'admin-menu-dashboard.html.php' );
         
     }
-
 } // End Class NF_Admin_Menus_Dashboard
