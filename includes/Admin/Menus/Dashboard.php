@@ -35,6 +35,6 @@ final class NF_Admin_Menus_Dashboard extends NF_Abstracts_Submenu
 
     public function get_new_form_templates() {
         $templates = Ninja_Forms()->config( 'NewFormTemplates' );
-        die( json_encode( $templates ) );
+        die( json_encode( array_values( $templates ) ) );
     }
 } // End Class NF_Admin_Menus_Dashboard
