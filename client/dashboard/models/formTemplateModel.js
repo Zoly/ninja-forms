@@ -14,6 +14,7 @@ define( [], function() {
 		},
 
 		initialize: function() {
+            this.set( 'desc', this.get( 'template-desc' ) );
         }
         
 	} );

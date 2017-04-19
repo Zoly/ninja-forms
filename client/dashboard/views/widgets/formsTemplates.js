@@ -8,7 +8,8 @@
  */
 define( ['models/formTemplateCollection', 'views/widgets/formsTemplate'], function( TemplateCollection, TemplateView ) {
     var view = Marionette.CollectionView.extend( {
-        template: "#tmpl-nf-forms-templates",
+        tagName: 'div',
+        className: 'templateList',
         collection: new TemplateCollection(),
         childView: TemplateView,
     } );
