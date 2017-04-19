@@ -13,16 +13,20 @@
 
 <!-- Navigation Template -->
 <script id="tmpl-nf-dashboard" type="text/template">
-    <h1>Ninja Forms Dashboard</h1>
+    <header class="topbar">
+        <div class="app-title">
+            <strong>Ninja Forms Dashboard</strong>
+        </div>
+    </header>
     <div class="notices"></div>
-    <nav>
+    <nav class="sections">
         <ul>
             <li class="widgets">Forms</li>
             <li class="apps">Apps</li>
             <li class="memberships">Membership</li>
         </ul>
     </nav>
-    <div class="content"></div>
+    <main class="content"></main>
 </script>
 
 <!-- Content Template -->
