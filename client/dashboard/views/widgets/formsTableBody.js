@@ -13,6 +13,16 @@ define( [ 'views/widgets/formsTableRow', 'views/widgets/formsTableEmpty', 'model
         childView: TableRowView,
         emptyView: EmptyView,
         tagName: 'tbody',
+
+        initialize: function(){
+            this.listenTo( nfRadio.channel( 'widget-forms' ), 'update:filter', this.updateFilter );
+        },
+
+        updateFilter: function( term ){
+            this.setFilter(function (child, index, collection) {
+                return 0 <= child.get( 'title' ).toLowerCase().indexOf( term.toLowerCase() );
+            });
+        }
     } );
     return view;
 } );

@@ -30,6 +30,10 @@ define( ['views/widgets/formsTable', 'views/widgets/formsTemplates'], function( 
             },
             'click .less': function(){
                 console.log('clicked less');
+            },
+            'keyup .filter input': function( e ){
+                var term = jQuery( e.target ).val();
+                nfRadio.channel( 'widget-forms' ).trigger( 'update:filter', term );
             }
         },
     } );
