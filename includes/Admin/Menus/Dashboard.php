@@ -29,6 +29,7 @@ final class NF_Admin_Menus_Dashboard extends NF_Abstracts_Submenu
         wp_enqueue_script( 'backbone-radio', Ninja_Forms::$url . 'assets/js/lib/backbone.radio.min.js', array( 'jquery', 'backbone' ) );
         wp_enqueue_script( 'backbone-marionette-3', Ninja_Forms::$url . 'assets/js/lib/backbone.marionette3.min.js', array( 'jquery', 'backbone' ) );
         wp_enqueue_script( 'nf-dashboard', Ninja_Forms::$url . 'assets/js/min/dashboard.min.js', array( 'backbone-radio', 'backbone-marionette-3' ) );
+        wp_enqueue_style( 'nf-dashboard', Ninja_Forms::$url . 'assets/css/dashboard.min.css' );
         Ninja_Forms::template( 'admin-menu-dashboard.html.php' );
         
     }

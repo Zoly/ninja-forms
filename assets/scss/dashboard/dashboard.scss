@@ -8,6 +8,7 @@ Notices
 Sections
 ---------------------------------------------*/
 
+@import 'sections/widgets';
 @import 'sections/apps';
 @import 'sections/memberships';
 
@@ -17,7 +18,24 @@ Widgets
 
 @import 'widgets/forms';
 
-.wrap {
-  max-width: 700px;
+#wpwrap {
+  background-color: #F3F6F8;
+}
+
+#ninja-forms-dashboard {
+  width: 500px;
+  max-width: 100%;
   margin: auto;
+
+  nav {
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: white;
+    ul {
+      display: flex;
+      li {
+        padding-right: 10px;
+      }
+    }
+  }
 }
