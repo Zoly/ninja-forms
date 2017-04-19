@@ -220,6 +220,7 @@ if( get_option( 'ninja_forms_load_deprecated', FALSE ) && ! ( isset( $_POST[ 'nf
                 self::$instance->controllers[ 'preview' ]     = new NF_AJAX_Controllers_Preview();
                 self::$instance->controllers[ 'submission' ]  = new NF_AJAX_Controllers_Submission();
                 self::$instance->controllers[ 'savedfields' ] = new NF_AJAX_Controllers_SavedFields();
+                self::$instance->controllers[ 'formendpoints' ] = new NF_AJAX_Controllers_FormEndpoints();
 
                 /*
                  * Async Requests

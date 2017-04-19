@@ -25,6 +25,6 @@ final class NF_Database_FormsController
     
     public function getFormsData()
     {
-        return( json_encode( array_values( $this->forms_data ) ) );
+        return(  array_values( $this->forms_data ) );
     }
 }
