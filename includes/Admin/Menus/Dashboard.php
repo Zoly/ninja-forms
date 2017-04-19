@@ -11,7 +11,6 @@ final class NF_Admin_Menus_Dashboard extends NF_Abstracts_Submenu
     public function __construct()
     {
         parent::__construct();
-        add_action( 'wp_ajax_nf_get_forms', array( $this, 'get_forms' ) );
         add_action( 'wp_ajax_nf_get_new_form_templates', array( $this, 'get_new_form_templates' ) );
     }
 
@@ -32,6 +31,10 @@ final class NF_Admin_Menus_Dashboard extends NF_Abstracts_Submenu
         wp_enqueue_script( 'nf-dashboard', Ninja_Forms::$url . 'assets/js/min/dashboard.min.js', array( 'backbone-radio', 'backbone-marionette-3' ) );
         wp_enqueue_style( 'nf-dashboard', Ninja_Forms::$url . 'assets/css/dashboard.min.css' );
         Ninja_Forms::template( 'admin-menu-dashboard.html.php' );
-        
+    }
+
+    public function get_new_form_templates() {
+        $templates = Ninja_Forms()->config( 'NewFormTemplates' );
+        die( json_encode( $templates ) );
     }
 } // End Class NF_Admin_Menus_Dashboard
