@@ -80,11 +80,9 @@
 </script>
 
 <script id="tmpl-nf-widget-forms-table-row" type="text/template">
-    <tr>
-        <td>{{{ data.title }}}</td>
-        <td>{{{ data.shortcode }}}</td>
-        <td>{{{ data.created_at }}}</td>
-    </tr>
+    <td>{{{ data.title }}}</td>
+    <td>{{{ data.shortcode }}}</td>
+    <td>{{{ data.created_at }}}</td>
 </script>
 
 <!-- Apps Content -->
