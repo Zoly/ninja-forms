@@ -41,9 +41,7 @@
             <button class="add"><?php _e( 'Add New', 'ninja-forms' ); ?></button>
             <button class="cancel"><?php _e( 'Cancel', 'ninja-forms' ); ?></button>
         </div>
-        <div class="filter">
-            <input type="text" placeholder="<?php _e( 'Search Forms', 'ninja-forms' ); ?>">
-        </div>
+        <div class="filter"></div>
     </header>
     <main class="content"></main>
     <footer>
@@ -52,6 +50,10 @@
             <button class="less"><?php _e( 'Less', 'ninja-forms' ); ?></button>
         </div>
     </footer>
+</script>
+
+<script id="tmpl-nf-widget-forms-filter" type="text/template">
+    <input type="text" placeholder="<?php _e( 'Search Forms', 'ninja-forms' ); ?>">
 </script>
 
 <!-- Widget Area Template -->
