@@ -32,7 +32,7 @@ Widgets
 }
 
 @mixin wrap {
-  width: 500px;
+  width: 600px;
   max-width: 100%;
   margin: auto;
 }
@@ -46,6 +46,7 @@ Widgets
   .content {
     padding: 10px;
     margin-bottom: 20px;
+    background-color: white;
   }
 
   header {
@@ -60,11 +61,19 @@ Widgets
   nav {
     @include wrap;
     margin-bottom: 20px;
+
+    ul {
+      display: flex;
+
+      li {
+        cursor: pointer;
+        padding-right: 15px;
+      }
+    }
   }
 
 
   main {
     @include wrap;
-    background-color: white;
   }
 }

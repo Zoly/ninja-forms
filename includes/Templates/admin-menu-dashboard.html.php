@@ -79,6 +79,10 @@
     </table>
 </script>
 
+<script id="tmpl-nf-widget-forms-table-empty" type="text/template">
+    <td colspan="3">Loading forms...</td>
+</script>
+
 <script id="tmpl-nf-widget-forms-table-row" type="text/template">
     <td>{{{ data.title }}}</td>
     <td>{{{ data.shortcode }}}</td>
