@@ -15,11 +15,11 @@ define( [], function() {
         },
 
         events: {
-            'keyup input': 'updateFilter'
+            'keyup @ui.input': 'updateFilter'
         },
 
         initialize: function(){
-            this.listenTo( nfRadio.channel( 'widget-forms' ), 'clear:filter', this.clearFilter );
+            this.listenTo( nfRadio.channel( 'widget-forms' ), 'change:content', this.clearFilter );
         },
 
         updateFilter: function(){

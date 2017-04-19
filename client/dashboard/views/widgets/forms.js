@@ -30,24 +30,24 @@ define( [ 'views/widgets/formsFilter', 'views/widgets/formsTable', 'views/widget
         },
         
         events: {
-            'click .add': function(){
+            'click @ui.add': function(){
                 this.showChildView( 'content', new TemplatesView() );
-                nfRadio.channel( 'widget-forms' ).trigger( 'clear:filter' );
+                nfRadio.channel( 'widget-forms' ).trigger( 'change:content' );
                 this.getUI( 'add' ).hide();
                 this.getUI( 'cancel' ).show();
             },
-            'click .cancel': function(){
+            'click @ui.cancel': function(){
                 this.showChildView( 'content', new TableView() );
-                nfRadio.channel( 'widget-forms' ).trigger( 'clear:filter' );
+                nfRadio.channel( 'widget-forms' ).trigger( 'change:content' );
                 this.getUI( 'cancel' ).hide();
                 this.getUI( 'add' ).show();
             },
-            'click .more': function(){
+            'click @ui.more': function(){
                 console.log('clicked more');
                 this.getUI( 'more' ).hide();
                 this.getUI( 'less' ).show();
             },
-            'click .less': function(){
+            'click @ui.less': function(){
                 console.log('clicked less');
                 this.getUI( 'less' ).hide();
                 this.getUI( 'more' ).show();
