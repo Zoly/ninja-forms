@@ -64,7 +64,7 @@
                 <th><?php _e( 'Date Created', 'ninja-forms' ); ?></th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="content">
 
         </tbody>
     </table>
@@ -74,7 +74,7 @@
     <tr>
         <td>{{{ data.title }}}</td>
         <td>{{{ data.shortcode }}}</td>
-        <td>{{{ data.date-created }}}</td>
+        <td>{{{ data.created_at }}}</td>
     </tr>
 </script>
 
