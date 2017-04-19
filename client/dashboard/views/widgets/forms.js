@@ -6,7 +6,7 @@
  * @copyright (c) 2017 WP Ninjas
  * @since 3.2
  */
-define( ['views/widgets/formsTable'], function( TableView ) {
+define( ['views/widgets/formsTable', 'views/widgets/formsTemplates'], function( TableView, TemplatesView ) {
     var view = Marionette.View.extend( {
         template: "#tmpl-nf-widget-forms",
         
@@ -16,7 +16,22 @@ define( ['views/widgets/formsTable'], function( TableView ) {
         
         onRender: function() {
             this.showChildView( 'content', new TableView() );
-        }
+        },
+        
+        events: {
+            'click .add': function(){
+                this.showChildView( 'content', new TemplatesView() );
+            },
+            'click .cancel': function(){
+                this.showChildView( 'content', new TableView() );
+            },
+            'click .more': function(){
+                console.log('clicked more');
+            },
+            'click .less': function(){
+                console.log('clicked less');
+            }
+        },
     } );
     return view;
 } );
