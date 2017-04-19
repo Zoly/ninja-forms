@@ -4,7 +4,7 @@
  * @copyright (c) 2017 WP Ninjas
  * @since 3.2
  */
-define( [ 'views/widgets/forms.js' ], function( WidgetFormsView ) {
+define( [ 'views/widgets/forms' ], function( WidgetFormsView ) {
     var view = Marionette.View.extend( {
         template: '#tmpl-nf-widgets',
 

@@ -33,10 +33,16 @@
 <!-- Form Widget -->
 <script id="tmpl-nf-widget-forms" type="text/template">
     [FORMS WIDGET]
-    <div class="action"></div>
+    <div class="action">
+        <div class="nf-add">Add New</div>
+        <div class="nf-cancel">Cancel</div>
+    </div>
     <div class="filter"></div>
     <div class="content"></div>
-    <div class="action2"></div>
+    <div class="action2">
+        <div class="nf-more">Show More</div>
+        <div class="nf-less">Show Less</div>
+    </div>
 </script>
 
 <!-- Widget Area Template -->
