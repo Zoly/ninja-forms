@@ -1,17 +1,22 @@
-<!-- Dashboard Wrap -->
+<!--
+  Application Root Element
+  --------------------------------------------->
 <div class="wrap">
     <div id="ninja-forms-dashboard"></div>
 </div>
 
-
-
+<!--
+  Notices
+  --------------------------------------------->
 <!-- Auth Notice -->
 <script id="tmpl-nf-auth-notice" type="text/template">
     [AUTH GOES HERE]
     <div id="auth-notice"></div>
 </script>
 
-<!-- Navigation Template -->
+<!--
+  Navigation
+  --------------------------------------------->
 <script id="tmpl-nf-dashboard" type="text/template">
     <header class="topbar">
         <div class="app-title">
@@ -29,12 +34,16 @@
     <main class="content"></main>
 </script>
 
-<!-- Content Template -->
-<script id="tmpl-nf-content" type="text/template">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid cupiditate ducimus fugit illo itaque maxime nihil perferendis praesentium voluptates. Aperiam culpa delectus distinctio illo ipsum officia, officiis pariatur quasi.</p>
+<!--
+  Widgets Section
+  --------------------------------------------->
+<script id="tmpl-nf-widgets" type="text/template">
+    <div class="widget widget-forms"></div>
 </script>
 
-<!-- Form Widget -->
+<!--
+  Widget - Forms
+  --------------------------------------------->
 <script id="tmpl-nf-widget-forms" type="text/template">
     <header>
         <div class="action">
@@ -51,17 +60,9 @@
         </div>
     </footer>
 </script>
-
 <script id="tmpl-nf-widget-forms-filter" type="text/template">
     <input type="text" placeholder="<?php _e( 'Search Forms', 'ninja-forms' ); ?>">
 </script>
-
-<!-- Widget Area Template -->
-<script id="tmpl-nf-widgets" type="text/template">
-    <div class="widget widget-forms"></div>
-</script>
-
-<!-- Forms Template -->
 <script id="tmpl-nf-forms-template" type="text/template">
     <div class="template">
         <a href="admin.php?page=ninja-forms&form_id={{{ data.id }}}">
@@ -70,8 +71,6 @@
         </a>
     </div>
 </script>
-
-<!-- Widget Forms Table -->
 <script id="tmpl-nf-widget-forms-table" type="text/template">
     <table>
         <thead>
@@ -86,11 +85,9 @@
         </tbody>
     </table>
 </script>
-
 <script id="tmpl-nf-widget-forms-table-empty" type="text/template">
     <td colspan="3">Loading forms...</td>
 </script>
-
 <script id="tmpl-nf-widget-forms-table-row" type="text/template">
     <td>
         <span class="title">
@@ -108,16 +105,30 @@
     <td>{{{ data.created_at }}}</td>
 </script>
 
-<!-- Apps Content -->
+
+<!--
+  Apps Section
+  --------------------------------------------->
 <script id="tmpl-nf-apps" type="text/template">
     <!-- TODO: Create static template -->
     [APPS HERE]
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, adipisci aut dolor doloribus ducimus expedita fuga itaque maiores mollitia neque nostrum, nulla odit praesentium quaerat reiciendis repellat sint velit veniam!</p>
 </script>
 
-<!-- Membership Content -->
+<!--
+  Memberships Section
+  --------------------------------------------->
 <script id="tmpl-nf-memberships" type="text/template">
     <!-- TODO: Create static template -->
     [MEMBERSHIPS HERE]
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, dolore illum molestiae quis reprehenderit sequi. Commodi consequatur doloremque itaque obcaecati odit officia optio. Autem ducimus excepturi iusto minima molestias provident.</p>
+</script>
+
+<!--
+  Misc.
+  --------------------------------------------->
+
+<!-- Content Template -->
+<script id="tmpl-nf-content" type="text/template">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid cupiditate ducimus fugit illo itaque maxime nihil perferendis praesentium voluptates. Aperiam culpa delectus distinctio illo ipsum officia, officiis pariatur quasi.</p>
 </script>
