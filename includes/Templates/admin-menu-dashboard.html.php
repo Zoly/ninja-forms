@@ -93,13 +93,15 @@
 
 <script id="tmpl-nf-widget-forms-table-row" type="text/template">
     <td>
-        <span class="title">{{{ data.title }}}</span>
+        <span class="title">
+            <a href="admin.php?page=ninja-forms&form_id={{{ data.id }}}">{{{ data.title }}}</a>
+        </span>
         <ul>
-            <li>Edit</li>
-            <li>Delete</li>
-            <li>Duplicate</li>
-            <li>Preview Form</li>
-            <li>View Submissions</li>
+            <li><a href="admin.php?page=ninja-forms&form_id={{{ data.id }}}">Edit</a></li>
+            <li><a href="#">Delete</a></li>
+            <li><a href="#">Duplicate</a></li>
+            <li><a href="<?php print( get_home_url() ); ?>/?nf_preview_form={{{ data.id }}}">Preview Form</a></li>
+            <li><a href="edit.php?post_status=all&post_type=nf_sub&form_id={{{ data.id }}}">View Submissions</a></li>
         </ul>
     </td>
     <td>{{{ data.shortcode }}}</td>
