@@ -17,6 +17,11 @@ th {
   .action2 {
     display: flex;
   }
+
+  > div > main.content {
+    max-height: 400px;
+    overflow: auto;
+  }
 }
 
 .forms-collection {
