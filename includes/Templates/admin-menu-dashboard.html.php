@@ -93,8 +93,8 @@
             <li><a href="admin.php?page=ninja-forms&form_id={{{ data.id }}}">Edit</a></li>
             <li><a href="#" class="delete">Delete</a></li>
             <li><a href="#">Duplicate</a></li>
-            <li><a href="<?php print( get_home_url() ); ?>/?nf_preview_form={{{ data.id }}}">Preview Form</a></li>
-            <li><a href="edit.php?post_status=all&post_type=nf_sub&form_id={{{ data.id }}}">View Submissions</a></li>
+            <li><a href="<?php print( get_home_url() ); ?>/?nf_preview_form={{{ data.id }}}" target="_blank">Preview Form</a></li>
+            <li><a href="edit.php?post_status=all&post_type=nf_sub&form_id={{{ data.id }}}" target="_blank">View Submissions</a></li>
         </ul>
     </footer>
 </script>
