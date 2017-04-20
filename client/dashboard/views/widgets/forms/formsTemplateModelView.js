@@ -1,5 +1,5 @@
 /**
- * Forms Widget Table Row View
+ * Forms Widget Individual Form Template View
  *
  * @package Ninja Forms
  * @subpackage Dashboard
@@ -8,9 +8,7 @@
  */
 define( [], function() {
     var view = Marionette.View.extend( {
-        template: "#tmpl-nf-widget-forms-table-row",
-        tagName: 'tr',
-        className: 'forms-table-row'
+        template: "#tmpl-nf-widget-forms-template",
     } );
     return view;
 } );

@@ -5,15 +5,52 @@ th {
 .widget-forms {
   header {
     display: flex;
-
     div {
       flex: 1;
+    }
+    div:first-of-type {
+      flex: 2;
     }
   }
 
   .action,
   .action2 {
     display: flex;
+  }
+}
+
+.forms-collection {
+  & > div {
+    padding: 10px;
+  }
+  & > div:nth-child(odd){
+    background-color: #EBEDEE;
+  }
+  main {
+    display: flex;
+    div {
+      flex: 1;
+    }
+    div:first-of-type {
+      flex: 2;
+    }
+  }
+  footer ul {
+    margin: 0;
+    padding-top: 20px;
+    display: flex;
+    li {
+      a.delete {
+        color: red;
+      }
+      &:after {
+        content: ' |';
+        margin: auto 5px;
+      }
+      &:last-child:after {
+        content: '';
+      }
+    }
   }
 }
 

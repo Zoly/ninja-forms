@@ -1,17 +1,22 @@
 /**
- * Forms Widget Templates View
+ * Forms Widget Table Body Collection View
  *
  * @package Ninja Forms
  * @subpackage Dashboard
  * @copyright (c) 2017 WP Ninjas
  * @since 3.2
  */
-define( ['models/formTemplateCollection', 'views/widgets/formsTemplate'], function( TemplateCollection, TemplateView ) {
+define( [
+    'views/widgets/forms/formsModelView',
+    'views/widgets/forms/formsEmptyView',
+    'models/formCollection'
+], function( FormsModelView, FormsEmptyView, FormCollection ) {
     var view = Marionette.CollectionView.extend( {
-        tagName: 'div',
-        className: 'template-list',
-        collection: new TemplateCollection(),
-        childView: TemplateView,
+        template: "#tmpl-nf-widget-forms-collection",
+        collection: new FormCollection(),
+        childView: FormsModelView,
+        emptyView: FormsEmptyView,
+        className: 'forms-collection',
 
         initialize: function(){
             this.listenTo( nfRadio.channel( 'widget-forms' ), 'update:filter', this.updateFilter );

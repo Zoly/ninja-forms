@@ -6,7 +6,11 @@
  * @copyright (c) 2017 WP Ninjas
  * @since 3.2
  */
-define( [ 'views/widgets/formsFilter', 'views/widgets/formsTable', 'views/widgets/formsTemplates'], function( FilterView, TableView, TemplatesView ) {
+define( [
+    'views/widgets/forms/formsFilterView',
+    'views/widgets/forms/formsLayoutView',
+    'views/widgets/forms/formsTemplatesCollectionView'
+], function( FilterView, LayoutView, TemplatesView ) {
     var view = Marionette.View.extend( {
         template: "#tmpl-nf-widget-forms",
         
@@ -26,7 +30,7 @@ define( [ 'views/widgets/formsFilter', 'views/widgets/formsTable', 'views/widget
             this.getUI( 'cancel' ).hide();
             this.getUI( 'less' ).hide();
             this.showChildView( 'filter', new FilterView() );
-            this.showChildView( 'content', new TableView() );
+            this.showChildView( 'content', new LayoutView() );
         },
         
         events: {
@@ -37,7 +41,7 @@ define( [ 'views/widgets/formsFilter', 'views/widgets/formsTable', 'views/widget
                 this.getUI( 'cancel' ).show();
             },
             'click @ui.cancel': function(){
-                this.showChildView( 'content', new TableView() );
+                this.showChildView( 'content', new LayoutView() );
                 nfRadio.channel( 'widget-forms' ).trigger( 'change:content' );
                 this.getUI( 'cancel' ).hide();
                 this.getUI( 'add' ).show();
