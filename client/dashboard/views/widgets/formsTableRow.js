@@ -9,7 +9,8 @@
 define( [], function() {
     var view = Marionette.View.extend( {
         template: "#tmpl-nf-widget-forms-table-row",
-        tagName: 'tr'
+        tagName: 'tr',
+        className: 'forms-table-row'
     } );
     return view;
 } );

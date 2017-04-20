@@ -92,7 +92,16 @@
 </script>
 
 <script id="tmpl-nf-widget-forms-table-row" type="text/template">
-    <td>{{{ data.title }}}</td>
+    <td>
+        <span class="title">{{{ data.title }}}</span>
+        <ul>
+            <li>Edit</li>
+            <li>Delete</li>
+            <li>Duplicate</li>
+            <li>Preview Form</li>
+            <li>View Submissions</li>
+        </ul>
+    </td>
     <td>{{{ data.shortcode }}}</td>
     <td>{{{ data.created_at }}}</td>
 </script>
