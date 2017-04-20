@@ -337,16 +337,28 @@ define(['models/calcCollection'], function( CalcCollection ) {
 			calcModel.set( 'value', Number( mexp.eval( eqValues ) ).toFixed( calcModel.get( 'dec' ) ) );
 		},
         
+        /**
+         * Function to apply Locale Formatting to Calculations
+         * @since Version 3.1
+         * @param Str number
+         * 
+         * @return Str
+         */
         applyLocaleFormatting: function( number ) {
-            /*
-             * Our number will have a . as a decimal point. We want to replace that with our locale decimal, nfi18n.decimal_point.
-             */
-            var replacedDecimal = number.toString().replace( '.', '||' );
-            /*
-             * Add thousands separator. Our original number var won't have thousands separators.
-             */
-            var replacedThousands = replacedDecimal.replace( /\B(?=(\d{3})+(?!\d))/g, nfi18n.thousands_sep );
-            var formattedNumber = replacedThousands.replace( '||', nfi18n.decimal_point );
+            
+            // Split our string on the decimal to preserve context.
+            var splitNumber = number.split('.');
+            // If we have more than one element (if we had a decimal point)...
+            if ( splitNumber.length > 1 ) {
+                // Update the thousands and remerge the array.
+                splitNumber[ 0 ] = splitNumber[ 0 ].replace( /\B(?=(\d{3})+(?!\d))/g, nfi18n.thousands_sep );
+                var formattedNumber = splitNumber.join( nfi18n.decimal_point );
+            }
+            // Otherwise (we had no decimal point)...
+            else {
+                // Update the thousands.
+                var formattedNumber = number.replace( /\B(?=(\d{3})+(?!\d))/g, nfi18n.thousands_sep );
+            }
             return formattedNumber;
         }
 	});
