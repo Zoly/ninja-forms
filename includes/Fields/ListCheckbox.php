@@ -36,7 +36,7 @@ class NF_Fields_ListCheckbox extends NF_Abstracts_List
 
         $list = '';
         foreach( $field->get_setting( 'options' ) as $option ){
-            $checked = ( in_array( $option[ 'value' ], $value ) ) ? "checked" : '';
+            $checked = ( is_array( $value ) && in_array( $option[ 'value' ], $value ) ) ? "checked" : '';
             $list .= "<li><label><input type='checkbox' value='{$option[ 'value' ]}' name='fields[$id][]' $checked> {$option[ 'label' ]}</label></li>";
         }
 
